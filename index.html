@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethernet Configuration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Meshnet Electronics</div>
+      <ul class="menu">
+        <li class="active">Wireless Interfaces</li>
+        <li>IoT Protocols</li>
+        <li>Serial Protocols</li>
+        <li>Protocols</li>
+        <li>Status</li>
+        <li>I/O Devices</li>
+        <li>System Configuration</li>
+      </ul>
+      <button class="reboot">🔁 Reboot Device</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="breadcrumbs">Home &gt; Serial Protocols &gt; Ethernet Configuration</div>
+        <div class="status-area">
+          <span class="status online"></span> Online
+          <button class="logout">Logout</button>
+        </div>
+      </header>
+
+      <div class="cards">
+       
+        <section class="card">
+            <div class="card-header">
+              <h2>Ethernet Port 1 Configuration</h2>
+              <span class="disconnected">🔌 Disconnected</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="eth1-toggle" />
+              <span class="slider"></span>
+              Enable Ethernet 1
+            </label>
+          
+            <form>
+              <div class="form-row">
+                <label>
+                  Priority
+                  <input type="number" value="100" />
+                  <small class="helper-text">Higher numbers indicate higher priority</small>
+                </label>
+                <label class=".default-route-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+default-route-label">
+                  <input type="checkbox" /> Use as default route
+                  <small class="helper-text">Route all traffic through this connection</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  IP Mode
+                  <select>
+                    <option>Static</option>
+                    <option>DHCP</option>
+                  </select>
+                  <small class="helper-text">Choose how the IP is assigned — manually (Static) or automatically (DHCP)</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  IP Address
+                  <input type="text" placeholder="Enter IP address" required />
+                  <small class="helper-text">Static IP address for this Ethernet port</small>
+                </label>
+                <label>
+                  Subnet Mask
+                  <input type="text" placeholder="Enter subnet mask" />
+                  <small class="helper-text">Defines the size of the network</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  Default Gateway
+                  <input type="text" placeholder="Enter IP address" required />
+                  <small class="helper-text">IP address used to reach external networks</small>
+                </label>
+                <label>
+                  DNS Server
+                  <input type="text" placeholder="Enter IP address" required/>
+                  <small class="helper-text">IP address of the DNS server</small>
+                </label>
+              </div>
+          
+              <div class="form-actions">
+                <button type="reset">Reset</button>
+                <button type="submit" class="save">Save Configuration</button>
+              </div>
+            </form>
+          </section>
+          
+         
+          <section class="card">
+            <div class="card-header">
+              <h2>Ethernet Port 2 Configuration</h2>
+              <span class="disconnected">🔌 Disconnected</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="eth2-toggle" />
+              <span class="slider"></span>
+              Enable Ethernet 2
+            </label>
+          
+            <form>
+              <div class="form-row">
+                <label>
+                  Priority
+                  <input type="number" value="100" />
+                  <small class="helper-text">Higher numbers indicate higher priority</small>
+                </label>
+                <label class="default-route-label">
+                  <input type="checkbox"/> Use as default route
+                  <small class="helper-text">Route all traffic through this connection</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  IP Mode
+                  <select>
+                    <option>Static</option>
+                    <option>DHCP</option>
+                  </select>
+                  <small class="helper-text">Choose how the IP is assigned — manually (Static) or automatically (DHCP)</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  IP Address
+                  <input type="text" placeholder="Enter IP address" required />
+                  <small class="helper-text">Static IP address for this Ethernet port</small>
+                </label>
+                <label>
+                  Subnet Mask
+                  <input type="text" placeholder="Enter subnet mask" required />
+                  <small class="helper-text">Defines the size of the network</small>
+                </label>
+              </div>
+          
+              <div class="form-row">
+                <label>
+                  Default Gateway
+                  <input type="text" placeholder="Enter IP address" required />
+                  <small class="helper-text">IP address used to reach external networks</small>
+                </label>
+                <label>
+                  DNS Server
+                  <input type="text" placeholder="Enter IP address" required />
+                  <small class="helper-text">IP address of the DNS server</small>
+                </label>
+              </div>
+          
+              <div class="form-actions">
+                <button type="reset">Reset</button>
+                <button type="submit" class="save">Save Configuration</button>
+              </div>
+            </form>
+          </section>
+          
+      </div>
+
+      <footer>
+        <p class="u">Firmware Version: 100</p><span id="current-time"></span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
